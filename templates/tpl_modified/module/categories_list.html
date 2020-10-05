@@ -1,0 +1,97 @@
+{config_load file="$language/lang_$language.conf" section="boxes"}
+{config_load file="lang_`$language`.custom"}
+
+<div class="cat_show1 cf">
+  {foreach name=aussen item=module_data from=$module_content}
+    <div class="cat_show2">
+    	<div class="cat_show2_inner">
+    	
+	      <div class="cat_show_name">
+	        <h2><a href="{$module_data.CATEGORY_LINK}" title="{$module_data.CATEGORY_NAME}">{$module_data.CATEGORY_NAME}</a></h2>
+	      </div>
+	      
+	      <div class="cat_show_image">
+	        {if $module_data.CATEGORY_IMAGE_TRUE!=''}
+	          <a href="{$module_data.CATEGORY_LINK}">
+	            <img src="{$module_data.CATEGORY_IMAGE}" alt="{$module_data.CATEGORY_NAME}" title="{$module_data.CATEGORY_NAME}" />
+	          </a>
+	        {else}
+	          <a href="{$module_data.CATEGORY_LINK}">
+	            <img src="{$tpl_path}img/nocatimage.gif" alt="{$module_data.CATEGORY_NAME}" title="{$module_data.CATEGORY_NAME}" />
+	          </a>
+	        {/if}
+	      </div>
+	      
+	      {*
+	      <div class="cat_show_text">
+	        {if $module_data.CATEGORY_DESCRIPTION!=''}
+	          <a href="{$module_data.CATEGORY_LINK}" title="{$module_data.CATEGORY_NAME}">
+	            {$module_data.CATEGORY_DESCRIPTION|truncate:200:"...":true}
+	          </a>
+	        {else}
+	          Bitte Kategoriebeschreibung f&uuml;r die Kategorie "{$module_data.CATEGORY_NAME}" anlegen. Diese wird nach 200 Zeichen automatisch gek&uuml;rzt.
+	        {/if}
+	      </div>
+	      *}
+
+    	</div>
+    </div>
+  {/foreach}
+  
+  {if $smarty.const.SPECIALS_CATEGORIES == true}
+	  {if $smarty.const.SPECIALS_EXISTS === true}
+	    <div class="cat_show2">
+	    	<div class="cat_show2_inner">
+	    	
+		      <div class="cat_show_name">
+		        <h2><a href="{$smarty.const.FILENAME_SPECIALS|xtc_href_link:''}" title="{#heading_specials#}">{#heading_specials#}</a></h2>
+		      </div>
+		      
+		      <div class="cat_show_image">
+		          <a href="{$smarty.const.FILENAME_SPECIALS|xtc_href_link:''}">
+		            <img src="{$tpl_path}img/specials.png" alt="{#heading_specials#}" title="{#heading_specials#}" />
+		          </a>
+		      </div>
+		      
+		      {*
+		      <div class="cat_show_text">
+		          <a href="{$smarty.const.FILENAME_SPECIALS|xtc_href_link:''}" title="{#heading_specials#}">
+		            Hier k&ouml;nnen Sie Sprachvariablen f&uuml;r die Kategorie "Angebote" einbauen. Diese sollte nicht l&auml;nger als 200 Zeichen sein.
+		          </a>
+		      </div>
+		      *}
+	
+	    	</div>
+	    </div>  
+	  {/if}
+  {/if}
+  
+  {if $smarty.const.WHATSNEW_CATEGORIES == true}
+    <div class="cat_show2">
+    	<div class="cat_show2_inner">
+    	
+	      <div class="cat_show_name">
+	        <h2><a href="{$smarty.const.FILENAME_PRODUCTS_NEW|xtc_href_link:''}" title="{#heading_whatsnew#}">{#heading_whatsnew#}</a></h2>
+	      </div>
+	      
+	      <div class="cat_show_image">
+	          <a href="{$smarty.const.FILENAME_PRODUCTS_NEW|xtc_href_link:''}">
+	            <img src="{$tpl_path}img/whatsnew.jpg" alt="{#heading_whatsnew#}" title="{#heading_whatsnew#}" />
+	          </a>
+	      </div>
+	      
+	      {*
+	      <div class="cat_show_text">
+	          <a href="{$smarty.const.FILENAME_PRODUCTS_NEW|xtc_href_link:''}" title="{#heading_whatsnew#}">
+	            Hier k&ouml;nnen Sie Sprachvariablen f&uuml;r die Kategorie "Neue Produkte" einbauen. Diese sollte nicht l&auml;nger als 200 Zeichen sein.
+	          </a>
+	      </div>
+	      *}
+
+    	</div>
+    </div>  
+  {/if}
+  
+  
+  <div class="cat_clear">&nbsp;</div>
+</div>

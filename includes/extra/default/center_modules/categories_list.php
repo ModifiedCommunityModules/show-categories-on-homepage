@@ -7,4 +7,3 @@
 	require_once(DIR_WS_MODULES . FILENAME_CATEGORIES_LIST);
 	
 	$default_smarty->assign('CATEGORIES_LIST', $module_categories);
-?>

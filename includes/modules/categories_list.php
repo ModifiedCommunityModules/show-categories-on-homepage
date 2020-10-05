@@ -1,8 +1,10 @@
 <?php
     /* MODUL: Kategorien auf der Startseite anzeigen (c_list Modul)
-     * 
-     * Anpassung an modified 1.x: sgei
-     * Anpassung an modified 2.x: |Alex|
+     * 2020 by Gulliver72 - transferred to Github and entered in MMLC
+     * 2017 weitere Anpassung an PHP7: awids
+     * 2016 Anpassung an modified 2.x und PHP7: |Alex|
+     * 2011 Aktualisierung: koshiro aka Micha und mrsmartmouse
+     * 2009 Anpassung an modified 1.x: sgei
      * Quelle: xtc-load.de - Autor: unbekannt
      */
    
@@ -17,9 +19,7 @@
     {
         $module_smarty->caching = 0;
         $module_categories = $module_smarty->fetch(CURRENT_TEMPLATE . '/module/categories_list.html');
-    }
-    else
-    {
+    } else {
         $module_smarty->caching = 1;
         $module_smarty->cache_lifetime = CACHE_LIFETIME;
         $module_smarty->cache_modified_check = CACHE_CHECK;
@@ -71,9 +71,7 @@
                             $image = DIR_WS_IMAGES . 'categories/noimage.gif';
                         }
                     }
-                }
-                else
-                {                     
+                } else {                     
                     if (defined('CATEGORIES_IMAGE_SHOW_NO_IMAGE') && CATEGORIES_IMAGE_SHOW_NO_IMAGE == 'true')
                     {
                         $image = DIR_WS_IMAGES . 'categories/noimage.gif';
@@ -84,7 +82,9 @@
                 $module_content[] = array ('CATEGORY_NAME'        => $categories['categories_name'],
                                            'CATEGORY_IMAGE_TRUE'  => $categories['categories_image'],        
                                            'CATEGORY_IMAGE'       => (($image != '') ? DIR_WS_BASE . $image : ''), 
-                                           'CATEGORY_LINK'        => xtc_href_link(FILENAME_DEFAULT,  xtc_get_all_get_params(array(array('cat', 'page', 'filter_id', 'manufacturers_id'))) . $category_link), 
+                                           'CATEGORY_LINK'        => xtc_href_link(FILENAME_DEFAULT,
+                                                                     xtc_get_all_get_params(array(array('cat', 'page', 'filter_id', 'manufacturers_id'))) . 
+                                                                     $category_link), 
                                            'CATEGORY_DESCRIPTION' => $categories['categories_description']
                                            );
 

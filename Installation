@@ -1,0 +1,51 @@
+---------------------------------------------------------------------
+   MODUL: Kategorien auf der Startseite anzeigen (c_list Modul)
+   Anpassung an modified 1.x: sgei
+   Anpassung an modified 2.x: awids
+   Quelle: xtc-load.de - Autor: unbekannt
+---------------------------------------------------------------------
+
+******************************
+*Schritt 1: Dateien hochladen*
+****************************** 
+Alle Dateien des Ordners shoproot nach ins root deines Shops laden. 
+Es werden dabei keine Dateien überschrieben, sofern nicht bereits ein
+ältere Version des Moduls installiert gewesen ist.
+
+*******************************************
+*Schritt 2: Template erweitern / editieren*
+*******************************************
+
+Öffne:
+
+	/templates/tpl_modified_responsive/css/general_bottom.css.php
+
+Suche:
+
+    DIR_TMPL_CSS.'media-queries.css', // must be last entry
+
+
+Füge DAVOR ein: 
+
+    DIR_TMPL_CSS.'c_list.css',
+
+
+---------------------------------------------------------------
+
+Öffne:
+
+	/templates/tpl_modified_responsive/module/main_content.html
+
+Suche (o. ä.):
+
+	{if isset($text) && $text != ''}<div class="homesite cf">{$text}</div>{/if}
+
+Füge DANACH in eine eigene Zeile ein:
+
+	<div>{$CATEGORIES_LIST}</div>	
+
+*******************
+*Schritt 3: Fertig*
+*******************
+
+Das Aussehen kann über die CSS-Datei gesteuert werden.

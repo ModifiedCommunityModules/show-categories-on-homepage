@@ -22,17 +22,13 @@
 	        {/if}
 	      </div>
 	      
-	      {*
+	      {if $module_data.CATEGORY_DESCRIPTION!=''}
 	      <div class="cat_show_text">
-	        {if $module_data.CATEGORY_DESCRIPTION!=''}
 	          <a href="{$module_data.CATEGORY_LINK}" title="{$module_data.CATEGORY_NAME}">
 	            {$module_data.CATEGORY_DESCRIPTION|truncate:200:"...":true}
 	          </a>
-	        {else}
-	          Bitte Kategoriebeschreibung f&uuml;r die Kategorie "{$module_data.CATEGORY_NAME}" anlegen. Diese wird nach 200 Zeichen automatisch gek&uuml;rzt.
-	        {/if}
 	      </div>
-	      *}
+	      {/if}
 
     	</div>
     </div>

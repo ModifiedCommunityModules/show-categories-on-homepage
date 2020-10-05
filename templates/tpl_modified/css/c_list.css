@@ -1,81 +1,83 @@
-/* ---------------------------------------------------------------------
-   MODUL: Kategorien auf der Startseite anzeigen (c_list Modul)
-   Anpassung an modified 1.x: sgei
-   Anpassung an modified 2.x: |Alex|
-   Quelle: xtc-load.de - Autor: unbekannt
-   --------------------------------------------------------------------- */
+/* MODUL: Kategorien auf der Startseite anzeigen (c_list Modul)
+ * 2020 by Gulliver72 - transferred to Github and entered in MMLC
+ * 2017 weitere Anpassung an PHP7: awids
+ * 2016 Anpassung an modified 2.x und PHP7: |Alex|
+ * 2011 Aktualisierung: koshiro aka Micha und mrsmartmouse
+ * 2009 Anpassung an modified 1.x: sgei
+ * Quelle: xtc-load.de - Autor: unbekannt
+ */
 
 .cat_show1 {
-  margin: 20px -10px 0px -10px;
+    margin: 20px -10px 0px -10px;
 }
 .cat_show2 {
-  float: left;
-  width: 235px;
-  height: auto;
-  margin: 0px 10px 20px 10px;
+    float: left;
+    width: 235px;
+    height: auto;
+    margin: 0px 10px 20px 10px;
 }
 .cat_show2_inner {
-  border: 1px solid #ddd;
-  padding: 10px 10px 5px 10px;
-  min-height: 120px;
+    border: 1px solid #ddd;
+    padding: 10px 10px 5px 10px;
+    min-height: 120px;
 }
 .cat_show_name {
-  padding: 5px 0;
-  height: 40px;
-  overflow: hidden;
-  margin: -10px -10px 0 -10px;
-  background: #bbb;
+    padding: 5px 0;
+    height: 40px;
+    overflow: hidden;
+    margin: -10px -10px 0 -10px;
+    background: #bbb;
 }
 .cat_show_name h2 {
-  margin: 10px 0px 4px 0px;
-  text-align:center;
-  border-width: 0px 0px 0px 0px;
+    margin: 10px 0px 4px 0px;
+    text-align:center;
+    border-width: 0px 0px 0px 0px;
 }
 .cat_show_name h2 a, .cat_show_name h2 a:link, .cat_show_name h2 a:visited, .cat_show_name h2 a:active {
-  color:#444;
-  cursor:pointer;
+    color:#444;
+    cursor:pointer;
 }
 .cat_show_name h2 a {
-  text-decoration:none;
+    text-decoration:none;
 }
 .cat_show_text {
-  font-size: 13px;
-  line-height: 17px;
-  text-align:center;
-  padding: 10px 0px 10px 0px;
-  height:100px;
-  overflow:hidden;
+    font-size: 13px;
+    line-height: 17px;
+    text-align:center;
+    padding: 10px 0px 10px 0px;
+    height:100px;
+    overflow:hidden;
 }
 .cat_show_text a, .cat_show_text a:link, .cat_show_text a:visited, .cat_show_text a:active {
-  color:#444;
-  cursor:pointer;
+    color:#444;
+    cursor:pointer;
 }
 .cat_show_text a {
-  text-decoration:none;
+    text-decoration:none;
 }
 .cat_show_image {
-  margin: 20px 0 20px 0;
-  text-align: center;
-  width: 100%;
-  height: 160px;
-  position: relative;
+    margin: 20px 0 20px 0;
+    text-align: center;
+    width: 100%;
+    height: 160px;
+    position: relative;
 }
 .cat_show_image img {
-  position: absolute;
-  margin: auto;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: #FFFFFF;
-  max-height: 160px;
-  max-width: 100%;
-  border: 1px solid #ddd;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #FFFFFF;
+    max-height: 160px;
+    max-width: 100%;
+    border: 1px solid #ddd;
 }
 .cat_clear {
-  clear:both;
-  height:0;
-  margin:0;
-  padding:0;
-  font-size:0;
+    clear:both;
+    height:0;
+    margin:0;
+    padding:0;
+    font-size:0;
 }

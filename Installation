@@ -1,20 +1,21 @@
----------------------------------------------------------------------
-   MODUL: Kategorien auf der Startseite anzeigen (c_list Modul)
-   Anpassung an modified 1.x: sgei
-   Anpassung an modified 2.x: awids
-   Quelle: xtc-load.de - Autor: unbekannt
----------------------------------------------------------------------
+/*
+ * 2020 by Gulliver72 - transferred to Github and entered in MMLC
+ * 2016 Anpassung an modified 2.x und PHP7: |Alex|awids
+ * 2011 Aktualisierung: koshiro aka Micha und mrsmartmouse
+ * 2009 Anpassung an modified 1.x: sgei
+ * Quelle: xtc-load.de - Autor: unbekannt
+ */
 
-******************************
-*Schritt 1: Dateien hochladen*
-****************************** 
+********************************
+* Schritt 1: Dateien hochladen *
+******************************** 
 Alle Dateien des Ordners shoproot nach ins root deines Shops laden. 
 Es werden dabei keine Dateien überschrieben, sofern nicht bereits ein
 ältere Version des Moduls installiert gewesen ist.
 
-*******************************************
-*Schritt 2: Template erweitern / editieren*
-*******************************************
+*********************************************
+* Schritt 2: Template erweitern / editieren *
+*********************************************
 
 Öffne:
 
@@ -44,8 +45,8 @@ Füge DANACH in eine eigene Zeile ein:
 
 	<div>{$CATEGORIES_LIST}</div>	
 
-*******************
-*Schritt 3: Fertig*
-*******************
+*********************
+* Schritt 3: Fertig *
+*********************
 
 Das Aussehen kann über die CSS-Datei gesteuert werden.

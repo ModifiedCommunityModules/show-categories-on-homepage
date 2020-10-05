@@ -1,27 +1,31 @@
-	{config_load file="$language/lang_$language.conf" section="boxes"}
-  	<br />
-  	<div class="{if $smarty.get.keywords|htmlentities != ''}listingcontainer_full{else}listingcontainer{/if} cf">
-		{foreach name=aussen item=module_data from=$module_content}
-  		<div class="listingbox">
-			<div class="cat_lb_inner">
-      			{if $module_data.CATEGORY_DESCRIPTION != ''}
-				<div class="cat_show_text">
-        			<a href="{$module_data.CATEGORY_LINK}">
-          				{$module_data.CATEGORY_DESCRIPTION}
-        			</a>
-				</div>
-            	{/if}
-				{if $module_data.CATEGORY_IMAGE_TRUE != ''}
-				<div class="lb_image">
-          			<a href="{$module_data.CATEGORY_LINK}">
-						<img class="cat_image" src="{$module_data.CATEGORY_IMAGE}" alt="{$module_data.CATEGORY_NAME}" />
-					</a>
-				</div>
-            	{/if}
-      			<div class="cat_lb_title">
-					<a href="{$module_data.CATEGORY_LINK}">{$module_data.CATEGORY_NAME}</a>
-				</div>
+{config_load file="$language/lang_$language.conf" section="boxes"}
+<br />
+<div class="{if $smarty.get.keywords|htmlentities != ''}listingcontainer_full{else}listingcontainer{/if} cf">
+	{foreach name=aussen item=module_data from=$module_content}
+	<div class="listingbox">
+		<div class="cat_lb_inner">
+
+			{if $module_data.CATEGORY_DESCRIPTION != ''}
+			<div class="cat_show_text">
+       			<a href="{$module_data.CATEGORY_LINK}">
+       				{$module_data.CATEGORY_DESCRIPTION}
+       			</a>
 			</div>
-  		</div>
-		{/foreach}
-  	</div>
+           	{/if}
+				
+			{if $module_data.CATEGORY_IMAGE_TRUE != ''}
+			<div class="lb_image">
+       			<a href="{$module_data.CATEGORY_LINK}">
+					<img class="cat_image" src="{$module_data.CATEGORY_IMAGE}" alt="{$module_data.CATEGORY_NAME}" />
+				</a>
+			</div>
+           	{/if}
+				
+   			<div class="cat_lb_title">
+				<a href="{$module_data.CATEGORY_LINK}">{$module_data.CATEGORY_NAME}</a>
+			</div>
+				
+		</div>
+	</div>
+	{/foreach}
+</div>
